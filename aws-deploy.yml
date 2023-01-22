@@ -1,0 +1,39 @@
+region: us-west-1
+tags:
+  project: DnD Inventory
+
+s3:
+  site:
+    name: tool.dnd.inventory
+    dir: build
+    policy:
+    - Effect: Allow
+      Principal: "*"
+      Action:
+      - s3:GetObject
+      Resource:
+      - arn:aws:s3:::tool.dnd.inventory/*
+
+apig:
+  main:
+    name: Tool/DnD Inventory
+    stage: live
+    actions:
+      index:
+        type: http
+        method: get
+        url: https://s3.us-west-1.amazonaws.com/tool.dnd.inventory/index.html
+      files:
+        type: http
+        method: get
+        url: https://s3.us-west-1.amazonaws.com/tool.dnd.inventory/{file}
+    routes:
+      "GET /":
+        action: index
+      "GET /{file+}":
+        action: files
+
+deployment:
+  resources:
+  - s3:site
+  - apig:main

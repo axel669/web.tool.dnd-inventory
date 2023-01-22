@@ -1,0 +1,6 @@
+port: 45067
+headers:
+  cache-control: no-cache
+sources:
+- dir: build
+- dir: static
