@@ -8,6 +8,7 @@ specifiers:
   '@axel669/rollup-dollar-path': ^0.1.0
   '@axel669/rollup-html-input': ^0.1.2
   '@axel669/teascript': ^0.22.12
+  '@labyrinthos/asuid': ^0.1.0
   '@rollup/plugin-commonjs': ^17.0.0
   '@rollup/plugin-node-resolve': ^11.0.1
   ksuid: ^3.0.0
@@ -22,6 +23,7 @@ dependencies:
   '@axel669/array-sort': 0.1.0
   '@axel669/aws-deploy': 0.4.4
   '@axel669/immutable-update': 1.0.2
+  '@labyrinthos/asuid': 0.1.0
   ksuid: 3.0.0
 
 devDependencies:
@@ -1092,6 +1094,13 @@ packages:
       tslib: 2.4.1
     dev: false
 
+  /@axel669/aegis/0.2.7:
+    resolution: {integrity: sha512-WgfvLxLhOjb9Pnqr9MFulqKOmhEia0sl2YtEohyJUz20zhig9mFUyYOjjz26NG2Mbo+gP9LhNYtys6lM8n4uYg==}
+    hasBin: true
+    dependencies:
+      fast-glob: 3.2.12
+    dev: false
+
   /@axel669/array-sort/0.1.0:
     resolution: {integrity: sha512-7fucLTKIqkQWLv+op5FDa8MXRDtpRTTAnFU2dG+/1imJHJI2pAyUbpXCIU9SO5so+SKg5Yn2mtuQhTnx/pf2qg==}
     dev: false
@@ -1208,6 +1217,13 @@ packages:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: true
+
+  /@labyrinthos/asuid/0.1.0:
+    resolution: {integrity: sha512-0wm1w5vGsL6lo8ytzjfvW3FiLyzPrfiXugo5eH1rSCjLqvj1gkL6dJQWDBThHkaqwqHC9VWVBwSTwo/8L2LAqg==}
+    hasBin: true
+    dependencies:
+      '@axel669/aegis': 0.2.7
+    dev: false
 
   /@nodelib/fs.scandir/2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}

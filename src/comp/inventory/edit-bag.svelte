@@ -11,6 +11,8 @@
         Grid,
     } from "svelte-doric"
 
+    import asuid from "@labyrinthos/asuid/browser"
+
     export let bag
 
     let scr = null
@@ -43,7 +45,7 @@
                 g: 0,
                 p: 0,
             },
-            id: Date.now()
+            id: asuid()
         })
     }
 

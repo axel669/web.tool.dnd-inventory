@@ -19,12 +19,13 @@
         Flex,
     } from "svelte-doric"
 
+    import asuid from "@labyrinthos/asuid/browser"
+
     import CharCard from "./characters/char-card.svelte"
     import NewChar from "./characters/new-char.svelte"
     import Inventory from "./inventory.svelte"
 
     import api from "$/comm/mock/api.mjs"
-    import ksuid from "$/comm/ksuid.mjs"
 
     import chars from "$/state/chars.mjs"
 
@@ -40,7 +41,7 @@
             return
         }
 
-        const id = ksuid()
+        const id = asuid()
         chars.add(name, id)
         api.inventory.write(id, baseInventory)
     }

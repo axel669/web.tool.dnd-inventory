@@ -27,6 +27,7 @@
     "@axel669/array-sort": "^0.1.0",
     "@axel669/aws-deploy": "^0.4.4",
     "@axel669/immutable-update": "^1.0.2",
+    "@labyrinthos/asuid": "^0.1.0",
     "ksuid": "^3.0.0"
   }
 }

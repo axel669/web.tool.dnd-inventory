@@ -12,6 +12,8 @@
         Grid,
     } from "svelte-doric"
 
+    import asuid from "@labyrinthos/asuid/browser"
+
     export let item
 
     let scr = null
@@ -30,7 +32,7 @@
             name,
             weight,
             count,
-            id: Date.now(),
+            id: asuid(),
         })
     }
 

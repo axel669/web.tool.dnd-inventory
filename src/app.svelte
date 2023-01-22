@@ -11,8 +11,6 @@
     import Characters from "$/comp/characters.svelte"
     import Inventory from "$/comp/inventory.svelte"
 
-    import fs from "$/comm/fs.mjs"
-
     import view from "$/state/view.mjs"
 </script>
 
